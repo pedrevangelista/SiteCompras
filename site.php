@@ -13,7 +13,7 @@ include("partecima.php");
 		echo "<div class='blur zoom' id='carouseldiv$a'>
 <div class='carouselin'>
 <div id='carouselExampleControls$a' class='carousel slide' data-ride='carousel'>
-  <div class='carousel-inner'>";
+  <div class='carousel-inner' style='height:300px'>";
  
  $ii = 0;
 $sql = 'select grade.id_grade, produtos.nome, grade.id, grade.preco, grade.promocao from produtos inner join grade on produtos.Id = grade.id where grade.promocao > 0 group by id';
@@ -37,7 +37,7 @@ $row = mysqli_fetch_array($result);
 		echo '<div class="carousel-item">';
 	}
     echo "<form method='get' action='pagprod.php'>";
-    echo "<input type = 'image' name='produto' value='$idGrade' class='d-block w-100' src='prod/$idGrade.png'>"; 
+    echo "<input type = 'image' name='produto' value='$idGrade' class='d-block w-100 h-100' src='prod/$idGrade.png'>"; 
 		echo "<input type='hidden' name='p' value='$id1'>";
      echo '</form>'; 
   echo '<div class="carousel-caption d-none d-md-block">';
@@ -73,7 +73,7 @@ if ($jj >= $quantia){
 		echo '<div class="carousel-item">';
 	}
     echo "<form method='get' action='pagprod.php'>";
-    echo "<input type = 'image' name='produto' value='$idGrade' class='d-block w-100' src='prod/$idGrade.png'>"; 
+    echo "<input type = 'image' name='produto' value='$idGrade' class='d-block w-100 h-100' src='prod/$idGrade.png'>"; 
 		echo "<input type='hidden' name='p' value='$id1'>";
   echo '<div class="carousel-caption d-none d-md-block">';
    echo "<h4>$nome</h4>";
@@ -107,7 +107,7 @@ if ($jj >= $quantia*2){
 		echo '<div class="carousel-item">';
 	}
     echo "<form method='get' action='pagprod.php'>";
-    echo "<input type = 'image' name='produto' value='$idGrade' class='d-block w-100' src='prod/$idGrade.png'>"; 
+    echo "<input type = 'image' name='produto' value='$idGrade' class='d-block w-100 h-100' src='prod/$idGrade.png'>"; 
 		echo "<input type='hidden' name='p' value='$id1'>";
   echo '<div class="carousel-caption d-none d-md-block">';
    echo "<h4>$nome</h4>";
